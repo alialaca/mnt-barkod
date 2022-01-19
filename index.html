@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+<!--    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">-->
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="src/style/bootstrap.min.css">
+    <link rel="stylesheet" href="src/style/style.css">
+    <title>MNT Barcode</title>
+  </head>
+  <body>
+    <div id="app" class="container-fluid bg-light">
+      <div class="row">
+        <div
+                class="col-4 bg-light product"
+                v-for="product in products"
+                :key="product.sku"
+                @mouseover="product.hover = true"
+                @mouseleave="product.hover = false"
+        >
+          <div class="row">
+            <div class="col children" v-if="!product.hover">
+              <span class="mx-auto">{{product.children[0].label}}</span>
+            </div>
+            <div v-else class="col children" v-for="children in product.children" @click="doPDF({...children,size: product.size, count: product.count})">
+              <span class="mx-auto">{{children.label}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img id="barcode" src="" alt="" style="display: none;">
+    <script src="src/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/jspdf.js"></script>
+    <script src="src/js/jsbarcode.js"></script>
+    <script src="src/js/bebasneue/font-normal.js"></script>
+    <script src="src/js/bebasneue/font-bold.js"></script>
+    <script src="src/js/script.js"></script>
+    <script src="src/js/vue.js"></script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>

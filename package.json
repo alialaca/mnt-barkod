@@ -1,0 +1,25 @@
+{
+  "name": "mnt-barcode",
+  "productName": "MNT BARKOD",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . --overwrite --asar=true --paltform=win32 --arch=ia32 --icon=src/icons/barkod.ico --prune=true --out=dist --version-string.CompanyName-CE --version-string.FileDescription=CE --version-string.ProductName=MNTBARKOD"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^11.0.1",
+    "electron-packager": "^15.1.0"
+  }
+}

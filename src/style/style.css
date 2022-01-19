@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Bebas Neue Bold';
+    src: url("../fonts/BebasNeue Bold.otf");
+}
+
+.product {
+    height: calc(100vh/2);
+    width: calc(100vw/3);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border: orange 1px dashed;
+    overflow: hidden;
+}
+
+.product .children {
+    border: whitesmoke 1px solid;
+    width: calc(100vw/3);
+    height: calc(100vh/2);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Bebas Neue Bold";
+    font-size: 150px;
+    color: #676666;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.children:hover {
+    background-color: aqua;
+    color: black;
+    opacity: 1;
+}
+
+.children:nth-child(1) {
+    width: calc(100vw/3);
+}
+.children:nth-child(2) {
+}
