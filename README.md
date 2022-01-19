@@ -4,8 +4,8 @@
 
 [FixPro](https://www.fixpro.com.tr) mantolama dübelleri için etiket basmaya yarayan, [electron](), [vue](), [jspdf]() den oluşan masaüstü uygulaması.
 
-<img src="./screenshots/app.jpg" width="500">
-<img src="./screenshots/pdf.jpg" width="500">
+![](./screenshots/app.jpg)
+![](./screenshots/pdf.jpg)
 
 ## Kullanım
 
